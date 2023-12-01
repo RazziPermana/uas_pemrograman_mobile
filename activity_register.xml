@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextAngkatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Angkatan"
+        android:layout_below="@id/editTextNama"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmailRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/editTextAngkatan"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_below="@id/editTextEmailRegister"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar"
+        android:layout_below="@id/editTextPasswordRegister"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sudah punya akun? Login disini."
+        android:layout_below="@id/btnRegister"
+        android:layout_marginTop="16dp"
+        android:textColor="#0000FF"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="goToLogin"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+</RelativeLayout>
