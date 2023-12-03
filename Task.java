@@ -1,5 +1,6 @@
 package com.example.uastest;
 
+
 public class Task {
     private int id;
     private int userId;
@@ -8,15 +9,15 @@ public class Task {
     private String title;
     private User user;
 
-    public String getLinkUrl() {
-        return linkUrl;
+    public String getlogoUrl() {
+        return logoUrl;
     }
 
-    public void setLinkUrl(String linkUrl) {
-        this.linkUrl = linkUrl;
+    public void setlogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
     }
 
-    private String linkUrl;
+    private String logoUrl;
 
 
     public String getSelectedType() {
