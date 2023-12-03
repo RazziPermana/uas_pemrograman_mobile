@@ -151,7 +151,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 task.setTimestamp(cursor.getString(cursor.getColumnIndex(COLUMN_TASK_TIMESTAMP)));
                 int userId = cursor.getInt(cursor.getColumnIndex(COLUMN_TASK_USER_ID));
                 task.setSelectedType(cursor.getString(cursor.getColumnIndex(COLUMN_SELECTED_TYPE)));
-                task.setLinkUrl(cursor.getString(cursor.getColumnIndex(COLUMN_LINK_URL)));
+                task.setlogoUrl(cursor.getString(cursor.getColumnIndex(COLUMN_LINK_URL)));
                 User user = getUserById(userId);
                 task.setUser(user);
 
@@ -252,7 +252,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 task.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_TASK_DESCRIPTION)));
                 task.setTimestamp(cursor.getString(cursor.getColumnIndex(COLUMN_TASK_TIMESTAMP)));
                 task.setSelectedType(cursor.getString(cursor.getColumnIndex(COLUMN_SELECTED_TYPE)));
-                task.setLinkUrl(cursor.getString(cursor.getColumnIndex(COLUMN_LINK_URL)));
+                task.setlogoUrl(cursor.getString(cursor.getColumnIndex(COLUMN_LINK_URL)));
                 int userId = cursor.getInt(cursor.getColumnIndex(COLUMN_TASK_USER_ID));
                 User user = getUserById(userId);
                 task.setUser(user);
