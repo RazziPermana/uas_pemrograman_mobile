@@ -33,7 +33,7 @@ public class SelectTypeDialogFragment extends DialogFragment {
         radioWeb = view.findViewById(R.id.radioWeb);
         btnSelectType = view.findViewById(R.id.btnSelectType);
 
-        fetchLogoData();  // Panggil metode fetchLogoData saat fragment dibuat
+        fetchLogoData();
 
         btnSelectType.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,10 +44,10 @@ public class SelectTypeDialogFragment extends DialogFragment {
 
                     if (checkedRadioButtonId == R.id.radioMobile) {
                         selectedType = radioMobile.getText().toString().trim();
-                        selectedLogoUrl = "https://cdn-icons-png.flaticon.com/512/61/61120.png";
+                        selectedLogoUrl = taskList.get(0).getlogoUrl();
                     } else if (checkedRadioButtonId == R.id.radioWeb) {
                         selectedType = radioWeb.getText().toString().trim();
-                        selectedLogoUrl = "https://i.pinimg.com/564x/1b/7a/c7/1b7ac786a1a5e31b6201eaeb14343f8a.jpg";
+                        selectedLogoUrl = taskList.get(1).getlogoUrl();
                     }
 
                     if (onOptionDialogListener != null) {
@@ -63,7 +63,7 @@ public class SelectTypeDialogFragment extends DialogFragment {
 
     private void fetchLogoData() {
         ApiService apiService = RetrofitClient.getClient().create(ApiService.class);
-        Call<List<Task>> call = apiService.getTasks(); // Sesuaikan dengan metode API yang benar
+        Call<List<Task>> call = apiService.getTasks();
 
         call.enqueue(new Callback<List<Task>>() {
             @Override
