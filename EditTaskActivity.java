@@ -50,7 +50,7 @@ public class EditTaskActivity extends AppCompatActivity {
                 String newDescription = editTextDescription.getText().toString().trim();
 
                 // Memperbarui tugas di database
-                dbHelper.updateTask(taskId, newDescription, existingTask.getTimestamp(), loggedInUser.getId(), newTitle, selectedtype, existingTask.getLinkUrl());
+                dbHelper.updateTask(taskId, newDescription, existingTask.getTimestamp(), loggedInUser.getId(), newTitle, selectedtype, existingTask.getlogoUrl());
 
 
                 // Tutup activity setelah menyimpan perubahan
