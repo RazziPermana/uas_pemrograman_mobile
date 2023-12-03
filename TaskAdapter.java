@@ -70,7 +70,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         holder.textViewTimestamp.setText("Waktu       : " + currentTask.getTimestamp());
 
         // Tambahkan kode untuk memuat gambar menggunakan Glide
-        String imageUrl = currentTask.getLinkUrl(); // Ambil URL gambar dari objek Task
+        String imageUrl = currentTask.getlogoUrl();
         Glide.with(context)
                 .load(imageUrl)
                 .centerCrop()
